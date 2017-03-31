@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+    <entity repository-class="Kay\Bundle\PlatformBundle\Repository\CommentRepository" name="Kay\Bundle\PlatformBundle\Entity\Comment" table="comments">
+        <id name="id" type="integer" column="id">
+            <generator strategy="AUTO"/>
+        </id>
+        <field name="content" type="text" column="content"/>
+        <field name="rating" type="integer" column="rating"/>
+        <field name="createdAt" type="datetime" column="created_at"/>
+        <many-to-one field="courses" target-entity="Kay\Bundle\PlatformBundle\Entity\Courses" inversed-by="comments">
+            <join-column name="courses_id" referenced-column-name="id" />
+        </many-to-one>
+        <many-to-one field="user" target-entity="Kay\Bundle\UserBundle\Entity\User" inversed-by="comments">
+            <join-column name="user_id" referenced-column-name="id" />
+        </many-to-one>
+    </entity>
+</doctrine-mapping>

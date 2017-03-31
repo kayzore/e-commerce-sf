@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+    <entity repository-class="Kay\Bundle\UserBundle\Repository\CartRepository" name="Kay\Bundle\UserBundle\Entity\Cart" table="carts">
+        <id name="id" type="integer" column="id">
+            <generator strategy="AUTO"/>
+        </id>
+        <field name="coursesIdList" type="array" column="courses_id_list"/>
+        <field name="createdAt" type="datetime" column="created_at"/>
+        <one-to-one field="user" target-entity="Kay\Bundle\UserBundle\Entity\User" inversed-by="cart">
+            <join-column name="user_id" referenced-column-name="id" />
+        </one-to-one>
+    </entity>
+</doctrine-mapping>
