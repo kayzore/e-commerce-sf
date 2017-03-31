@@ -1,0 +1,34 @@
+# http://symfony.com/doc/current/security.html
+security:
+    encoders:
+        Kay\Bundle\UserBundle\Entity\User:
+            algorithm: bcrypt
+            cost: 13
+
+    providers:
+        our_db_provider:
+            entity:
+                class: KayUserBundle:User
+                property: username
+
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+
+        main:
+            anonymous: ~
+            form_login:
+                login_path: login
+                check_path: login
+                csrf_token_generator: security.csrf.token_manager
+            logout:
+                path:   logout
+                target: /
+
+    access_control:
+        - { path: ^/admin, roles: ROLE_ADMIN }
+
+    role_hierarchy:
+        ROLE_ADMIN:       ROLE_USER
+        ROLE_SUPER_ADMIN: ROLE_ADMIN
