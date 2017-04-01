@@ -11,9 +11,10 @@
     <field name="email" type="string" column="email" length="60" unique="true"/>
     <field name="isActive" type="boolean" column="is_active"/>
     <field name="roles" type="array" column="roles"/>
-    <field name="adress" type="string" length="255" column="adress"/>
+    <field name="address" type="string" length="255" column="address"/>
     <field name="city" type="string" length="100" column="city"/>
     <field name="country" type="string" length="100" column="country"/>
+    <field name="cp" type="string" length="5" column="cp"/>
     <field name="createdAt" type="datetime" column="created_at"/>
     <one-to-one field="cart" target-entity="Kay\Bundle\UserBundle\Entity\Cart" mapped-by="user" />
     <one-to-many field="comments" target-entity="Kay\Bundle\PlatformBundle\Entity\Comment" mapped-by="user" />

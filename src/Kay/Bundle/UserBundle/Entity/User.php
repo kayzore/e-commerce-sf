@@ -50,10 +50,11 @@ class User implements UserInterface, \Serializable
      * @var array
      */
     private $roles;
+
     /**
      * @var string
      */
-    private $adress;
+    private $address;
 
     /**
      * @var string
@@ -64,6 +65,11 @@ class User implements UserInterface, \Serializable
      * @var string
      */
     private $country;
+
+    /**
+     * @var string
+     */
+    private $cp;
 
     /**
      * @var \DateTime
@@ -296,27 +302,27 @@ class User implements UserInterface, \Serializable
     }
 
     /**
-     * Set adress
+     * Set address
      *
-     * @param string $adress
+     * @param string $address
      *
      * @return User
      */
-    public function setAdress($adress)
+    public function setAddress($address)
     {
-        $this->adress = $adress;
+        $this->address = $address;
 
         return $this;
     }
 
     /**
-     * Get adress
+     * Get address
      *
      * @return string
      */
-    public function getAdress()
+    public function getAddress()
     {
-        return $this->adress;
+        return $this->address;
     }
 
     /**
@@ -365,6 +371,30 @@ class User implements UserInterface, \Serializable
     public function getCountry()
     {
         return $this->country;
+    }
+
+    /**
+     * Set cp
+     *
+     * @param string $cp
+     *
+     * @return User
+     */
+    public function setCp($cp)
+    {
+        $this->cp = $cp;
+
+        return $this;
+    }
+
+    /**
+     * Get cp
+     *
+     * @return string
+     */
+    public function getCp()
+    {
+        return $this->cp;
     }
 
     /**
