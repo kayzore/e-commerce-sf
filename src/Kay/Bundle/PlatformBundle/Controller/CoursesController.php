@@ -2,6 +2,7 @@
 
 namespace Kay\Bundle\PlatformBundle\Controller;
 
+use Kay\Bundle\PlatformBundle\Entity\Chapter;
 use Kay\Bundle\PlatformBundle\Entity\Courses;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -65,9 +66,12 @@ class CoursesController extends Controller
     {
         $deleteForm = $this->createDeleteForm($course);
 
+        $chapterForm = $this->createForm('Kay\Bundle\PlatformBundle\Form\ChapterType', new Chapter());
+
         return $this->render('KayPlatformBundle:Courses:show.html.twig', array(
-            'course' => $course,
-            'delete_form' => $deleteForm->createView(),
+            'course'        => $course,
+            'delete_form'   => $deleteForm->createView(),
+            'chapter_form'  => $chapterForm->createView()
         ));
     }
 

@@ -11,7 +11,7 @@
         <one-to-many field="chapters" target-entity="Kay\Bundle\PlatformBundle\Entity\Chapter" mapped-by="courses" />
         <one-to-many field="comments" target-entity="Kay\Bundle\PlatformBundle\Entity\Comment" mapped-by="courses" />
         <many-to-one field="category" target-entity="Kay\Bundle\PlatformBundle\Entity\Category" inversed-by="courses">
-          <join-column name="category_id" referenced-column-name="id" />
+            <join-column name="category_id" referenced-column-name="id" />
         </many-to-one>
         <many-to-many field="tags" target-entity="Kay\Bundle\TagBundle\Entity\Tag">
             <cascade>

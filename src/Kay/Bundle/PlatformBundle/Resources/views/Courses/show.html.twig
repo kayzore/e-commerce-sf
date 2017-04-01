@@ -1,4 +1,4 @@
-{% extends 'base.html.twig' %}
+{% extends 'KayPlatformBundle::layout.html.twig' %}
 
 {% block body %}
     <h1>Course</h1>
@@ -27,6 +27,10 @@
             </tr>
         </tbody>
     </table>
+
+    <hr>
+    {{ form(chapter_form) }}
+    <hr>
 
     <ul>
         <li>
