@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
-  <entity repository-class="Kay\Bundle\UserBundle\Repository\UserRepository" name="Kay\Bundle\UserBundle\Entity\User" table="users">
-    <id name="id" type="integer" column="id">
-      <generator strategy="AUTO"/>
-    </id>
-    <field name="firstname" type="string" column="firstname" length="40" nullable="true"/>
-    <field name="lastname" type="string" column="lastname" length="40" nullable="true"/>
-    <field name="username" type="string" column="username" length="25" unique="true"/>
-    <field name="password" type="string" column="password" length="64"/>
-    <field name="email" type="string" column="email" length="60" unique="true"/>
-    <field name="isActive" type="boolean" column="is_active"/>
-    <field name="roles" type="array" column="roles"/>
-    <field name="address" type="string" length="255" column="address"/>
-    <field name="city" type="string" length="100" column="city"/>
-    <field name="country" type="string" length="100" column="country"/>
-    <field name="cp" type="string" length="5" column="cp"/>
-    <field name="createdAt" type="datetime" column="created_at"/>
-    <one-to-one field="cart" target-entity="Kay\Bundle\UserBundle\Entity\Cart" mapped-by="user" />
-    <one-to-many field="comments" target-entity="Kay\Bundle\PlatformBundle\Entity\Comment" mapped-by="user" />
-    <one-to-many field="purchases" target-entity="Kay\Bundle\UserBundle\Entity\Purchase" mapped-by="user" />
-  </entity>
+    <entity repository-class="Kay\Bundle\UserBundle\Repository\UserRepository" name="Kay\Bundle\UserBundle\Entity\User" table="users">
+        <id name="id" type="integer" column="id">
+            <generator strategy="AUTO"/>
+        </id>
+        <field name="firstname" type="string" column="firstname" length="40" nullable="true"/>
+        <field name="lastname" type="string" column="lastname" length="40" nullable="true"/>
+        <field name="username" type="string" column="username" length="25" unique="true"/>
+        <field name="password" type="string" column="password" length="64"/>
+        <field name="email" type="string" column="email" length="60" unique="true"/>
+        <field name="isActive" type="boolean" column="is_active"/>
+        <field name="roles" type="array" column="roles"/>
+        <field name="address" type="string" length="255" column="address"/>
+        <field name="city" type="string" length="100" column="city"/>
+        <field name="country" type="string" length="100" column="country"/>
+        <field name="cp" type="string" length="5" column="cp"/>
+        <field name="createdAt" type="datetime" column="created_at"/>
+        <one-to-one field="cart" target-entity="Kay\Bundle\UserBundle\Entity\Cart" mapped-by="user" />
+        <one-to-many field="comments" target-entity="Kay\Bundle\PlatformBundle\Entity\Comment" mapped-by="user" />
+        <one-to-many field="purchases" target-entity="Kay\Bundle\UserBundle\Entity\Purchase" mapped-by="user" />
+    </entity>
 </doctrine-mapping>
