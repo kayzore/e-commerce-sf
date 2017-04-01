@@ -1,0 +1,6 @@
+services:
+    tag.form.type.tags:
+        class: Kay\Bundle\TagBundle\Form\Type\TagsType
+        arguments: ['@doctrine.orm.entity_manager']
+        tags:
+            - { name: form.type }

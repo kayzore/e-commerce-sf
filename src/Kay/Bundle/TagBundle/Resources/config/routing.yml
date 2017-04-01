@@ -1,0 +1,4 @@
+tag_index:
+    path:     /tags.json
+    defaults: { _controller: "KayTagBundle:Tag:index" }
+    methods:  GET

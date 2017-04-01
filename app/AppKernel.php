@@ -20,6 +20,7 @@ class AppKernel extends Kernel
             new Kay\Bundle\PlatformBundle\KayPlatformBundle(),
             new Kay\Bundle\AdminBundle\KayAdminBundle(),
             new Kay\Bundle\CoreBundle\KayCoreBundle(),
+            new Kay\Bundle\TagBundle\KayTagBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {
