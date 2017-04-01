@@ -13,5 +13,18 @@
         <many-to-one field="category" target-entity="Kay\Bundle\PlatformBundle\Entity\Category" inversed-by="courses">
           <join-column name="category_id" referenced-column-name="id" />
         </many-to-one>
+        <many-to-many field="tags" target-entity="Kay\Bundle\TagBundle\Entity\Tag">
+            <cascade>
+                <cascade-persist/>
+            </cascade>
+            <join-table name="courses_tags">
+                <join-columns>
+                    <join-column name="course_id" referenced-column-name="id" />
+                </join-columns>
+                <inverse-join-columns>
+                    <join-column name="tag_id" referenced-column-name="id" />
+                </inverse-join-columns>
+            </join-table>
+        </many-to-many>
     </entity>
 </doctrine-mapping>

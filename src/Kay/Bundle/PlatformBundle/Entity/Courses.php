@@ -2,12 +2,15 @@
 namespace Kay\Bundle\PlatformBundle\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
+use Kay\Bundle\TagBundle\Concern\Taggable;
 
 /**
  * Courses
  */
 class Courses
 {
+    use Taggable;
+
     /**
      * @var int
      */
@@ -49,13 +52,19 @@ class Courses
     private $category;
 
     /**
+     * @var array
+     */
+    private $tags;
+
+    /**
      * Constructor
      */
     public function __construct()
     {
         $this->chapters = new ArrayCollection();
         $this->comments = new ArrayCollection();
-        $this->createdAt = new \DateTime();
+        $this->createdAt = new \DateTime();;
+        $this->tags = new ArrayCollection();
     }
 
 
