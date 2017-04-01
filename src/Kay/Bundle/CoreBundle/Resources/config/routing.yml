@@ -1,0 +1,4 @@
+core_homepage:
+    path:     /
+    defaults: { _controller: "KayCoreBundle:Core:home" }
+    methods:  GET
