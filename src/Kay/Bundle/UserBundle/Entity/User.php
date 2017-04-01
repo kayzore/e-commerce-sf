@@ -50,6 +50,20 @@ class User implements UserInterface, \Serializable
      * @var array
      */
     private $roles;
+    /**
+     * @var string
+     */
+    private $adress;
+
+    /**
+     * @var string
+     */
+    private $city;
+
+    /**
+     * @var string
+     */
+    private $country;
 
     /**
      * @var \DateTime
@@ -279,6 +293,78 @@ class User implements UserInterface, \Serializable
             // see section on salt below
             // $this->salt
             ) = unserialize($serialized);
+    }
+
+    /**
+     * Set adress
+     *
+     * @param string $adress
+     *
+     * @return User
+     */
+    public function setAdress($adress)
+    {
+        $this->adress = $adress;
+
+        return $this;
+    }
+
+    /**
+     * Get adress
+     *
+     * @return string
+     */
+    public function getAdress()
+    {
+        return $this->adress;
+    }
+
+    /**
+     * Set city
+     *
+     * @param string $city
+     *
+     * @return User
+     */
+    public function setCity($city)
+    {
+        $this->city = $city;
+
+        return $this;
+    }
+
+    /**
+     * Get city
+     *
+     * @return string
+     */
+    public function getCity()
+    {
+        return $this->city;
+    }
+
+    /**
+     * Set country
+     *
+     * @param string $country
+     *
+     * @return User
+     */
+    public function setCountry($country)
+    {
+        $this->country = $country;
+
+        return $this;
+    }
+
+    /**
+     * Get country
+     *
+     * @return string
+     */
+    public function getCountry()
+    {
+        return $this->country;
     }
 
     /**
