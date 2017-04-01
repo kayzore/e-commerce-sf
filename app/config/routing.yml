@@ -1,3 +1,11 @@
+kay_core:
+    resource: "@KayCoreBundle/Resources/config/routing.yml"
+    prefix:   /
+
+kay_admin:
+    resource: "@KayAdminBundle/Resources/config/routing.yml"
+    prefix:   /
+
 kay_platform:
     resource: "@KayPlatformBundle/Resources/config/routing.yml"
     prefix:   /

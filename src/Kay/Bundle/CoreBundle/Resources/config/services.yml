@@ -1,0 +1,4 @@
+services:
+#    kay_core.example:
+#        class: Kay\Bundle\CoreBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
