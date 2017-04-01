@@ -1,0 +1,24 @@
+courses_index:
+    path:     /
+    defaults: { _controller: "KayPlatformBundle:Courses:index" }
+    methods:  GET
+
+courses_show:
+    path:     /{id}/show
+    defaults: { _controller: "KayPlatformBundle:Courses:show" }
+    methods:  GET
+
+courses_new:
+    path:     /new
+    defaults: { _controller: "KayPlatformBundle:Courses:new" }
+    methods:  [GET, POST]
+
+courses_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "KayPlatformBundle:Courses:edit" }
+    methods:  [GET, POST]
+
+courses_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "KayPlatformBundle:Courses:delete" }
+    methods:  DELETE

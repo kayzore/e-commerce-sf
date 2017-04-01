@@ -1,0 +1,4 @@
+kay_platform_courses:
+    resource: "@KayPlatformBundle/Resources/config/routing/Courses.yml"
+    prefix:   /Courses
+
