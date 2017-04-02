@@ -2,12 +2,13 @@
 <html lang="{{ app.request.locale }}">
     <head>
         <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}StudyDev{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
         {% block javascripts %}{% endblock %}
     </head>
     <body>
+        {% block navbar %}{% endblock %}
         <div class="container">
             {% block body %}{% endblock %}
         </div>
