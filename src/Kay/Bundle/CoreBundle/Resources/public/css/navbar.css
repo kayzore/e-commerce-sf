@@ -9,6 +9,9 @@ html, body {
     -moz-box-shadow: 0 2px 5px 5px rgba(0,0,0,0.5);
     box-shadow: 0 2px 5px 5px rgba(0,0,0,0.5);
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
 }
 .navbar-custom {
     background-color: gray;
@@ -109,9 +112,13 @@ fieldset[disabled] .navbar-custom .btn-link:focus {
 .navbar-custom .navbar-nav > li > a,
 .navbar > .container .navbar-brand, .navbar > .container .navbar-brand {
     line-height: 39px;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
 }
 .navbar-custom .navbar-collapse, .navbar-custom .navbar-form {
     line-height: 45px;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
 }
 
 .navbar.shrink {
