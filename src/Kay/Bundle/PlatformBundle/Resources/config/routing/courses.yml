@@ -8,11 +8,6 @@ courses_show:
     defaults: { _controller: "KayPlatformBundle:Courses:show" }
     methods:  GET
 
-courses_new:
-    path:     /new
-    defaults: { _controller: "KayPlatformBundle:Courses:new" }
-    methods:  [GET, POST]
-
 courses_edit:
     path:     /{id}/edit
     defaults: { _controller: "KayPlatformBundle:Courses:edit" }

@@ -1,0 +1,4 @@
+kay_admin_courses_new:
+    path:     /new
+    defaults: { _controller: "KayAdminBundle:Courses:new" }
+    methods:  [GET, POST]

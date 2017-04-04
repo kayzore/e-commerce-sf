@@ -1,0 +1,13 @@
+#form_new_courses .form_group {
+    margin: 10px 0;
+}
+#add_chapter.btn-not-fixed {
+    position: absolute;
+    top: 100%;
+    left: 20px;
+}
+#add_chapter.btn-fixed {
+    position: fixed;
+    top: 60px;
+    left:20px;
+}

@@ -142,4 +142,62 @@ class Chapter
     {
         return $this->courses;
     }
+    /**
+     * @var string
+     */
+    private $introduction;
+
+    /**
+     * @var string
+     */
+    private $content;
+
+
+    /**
+     * Set introduction
+     *
+     * @param string $introduction
+     *
+     * @return Chapter
+     */
+    public function setIntroduction($introduction)
+    {
+        $this->introduction = $introduction;
+
+        return $this;
+    }
+
+    /**
+     * Get introduction
+     *
+     * @return string
+     */
+    public function getIntroduction()
+    {
+        return $this->introduction;
+    }
+
+    /**
+     * Set content
+     *
+     * @param string $content
+     *
+     * @return Chapter
+     */
+    public function setContent($content)
+    {
+        $this->content = $content;
+
+        return $this;
+    }
+
+    /**
+     * Get content
+     *
+     * @return string
+     */
+    public function getContent()
+    {
+        return $this->content;
+    }
 }
