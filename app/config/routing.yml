@@ -8,7 +8,7 @@ kay_core:
 
 kay_admin:
     resource: "@KayAdminBundle/Resources/config/routing.yml"
-    prefix:   /
+    prefix:   /admin
 
 kay_platform:
     resource: "@KayPlatformBundle/Resources/config/routing.yml"

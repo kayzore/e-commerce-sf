@@ -1,0 +1,24 @@
+{% extends '::base.html.twig' %}
+
+{% block stylesheets %}
+    {% stylesheets filter="cssrewrite,uglifycss" output="compressed/css/user_styles.css"
+    '../vendor/external/libs/bootstrap/dist/css/bootstrap.css'
+    '../vendor/external/libs/bootstrap/dist/css/bootstrap-theme.css'
+    '@KayCoreBundle/Resources/public/css/navbar.css'
+    '@KayCoreBundle/Resources/public/css/footer.css' %}
+    <link rel="stylesheet" href="{{ asset_url }}" />
+    {% endstylesheets %}
+{% endblock %}
+
+{% block javascripts %}
+    {% javascripts filter="uglifyjs2" output="compressed/js/user_scripts.js"
+    '../vendor/external/libs/jquery/dist/jquery.js'
+    '../vendor/external/libs/bootstrap/dist/js/bootstrap.js'
+    '@KayCoreBundle/Resources/public/js/navbar.js'%}
+    <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+{% endblock %}
+
+{% block navbar %}
+    {{ include('@KayCore/navbar.html.twig') }}
+{% endblock %}

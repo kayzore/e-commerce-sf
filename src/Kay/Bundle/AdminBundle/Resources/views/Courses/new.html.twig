@@ -1,0 +1,73 @@
+{% extends 'KayAdminBundle::layout.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {% stylesheets filter="cssrewrite,uglifycss" output="compressed/css/tags_input.css"
+    '@KayTagBundle/Resources/public/js/tags-input/bootstrap-tagsinput.css'
+    '@KayAdminBundle/Resources/public/css/courses_form.css' %}
+    <link rel="stylesheet" href="{{ asset_url }}" />
+    {% endstylesheets %}
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {% javascripts filter="uglifyjs2" output="compressed/js/tags_input.js"
+    '@KayTagBundle/Resources/public/js/tags-input/bootstrap-tagsinput.min.js'
+    '@KayTagBundle/Resources/public/js/typeahead.js'
+    '@KayTagBundle/Resources/public/js/main.js' %}
+    <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+    <script src="{{ asset('bundles/kayadmin/tinymce/tinymce.min.js') }}"></script>
+    <script src="{{ asset('bundles/kayadmin/js/courses_chapters.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+    {{ parent() }}
+    <h1>Création d'un cours</h1>
+
+    {{ form_start(form, {'attr': {'id': 'form_new_courses'}}) }}
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form_group">
+                {{ form_label(form.title) }}
+                {{ form_widget(form.title) }}
+            </div>
+            <div class="form_group">
+                {{ form_label(form.imageName) }}
+                {{ form_widget(form.imageName) }}
+            </div>
+
+            <div class="form_group">
+                {{ form_label(form.category) }}
+                {{ form_widget(form.category) }}
+            </div>
+
+            <div class="form_group">
+                {{ form_label(form.tags) }}<br>
+                {{ form_widget(form.tags) }}
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form_group">
+                {{ form_label(form.introduction) }}
+                {{ form_widget(form.introduction) }}
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <a href="#" id="add_chapter" class="btn btn-primary btn-not-fixed">Ajouter un chapitre</a>
+        <div class="col-md-12">
+            <div class="form_group">
+                {{ form_label(form.chapters) }}
+                {{ form_widget(form.chapters) }}
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="btn-group" role="group" aria-label="...">
+        <a href="{{ path('courses_index') }}" class="btn btn-primary">Back to the list</a>
+        <input type="submit" class="btn btn-success" value="Create" />
+    </div>
+    {{ form_end(form) }}
+{% endblock %}

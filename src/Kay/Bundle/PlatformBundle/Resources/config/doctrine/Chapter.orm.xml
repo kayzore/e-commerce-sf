@@ -5,7 +5,8 @@
             <generator strategy="AUTO"/>
         </id>
         <field name="title" type="string" column="title" length="255"/>
-        <one-to-many field="subChapters" target-entity="Kay\Bundle\PlatformBundle\Entity\SubChapter" mapped-by="chapters" />
+        <field name="introduction" type="text" column="introduction"/>
+        <field name="content" type="text" column="content"/>
         <many-to-one field="courses" target-entity="Kay\Bundle\PlatformBundle\Entity\Courses" inversed-by="chapters">
             <join-column name="courses_id" referenced-column-name="id" />
         </many-to-one>

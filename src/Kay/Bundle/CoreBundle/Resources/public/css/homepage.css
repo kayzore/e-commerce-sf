@@ -1,0 +1,18 @@
+#temoignages {
+    margin: 100px 0;
+    background-color: #edeaea;
+    border-radius: 5px;
+    -webkit-box-shadow: 5px 5px 5px 0 rgba(0,0,0,0.75);
+    -moz-box-shadow: 5px 5px 5px 0 rgba(0,0,0,0.75);
+    box-shadow: 5px 5px 5px 0 rgba(0,0,0,0.75);
+}
+
+.temoignage {
+    margin: 40px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.temoignage .media-body{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}

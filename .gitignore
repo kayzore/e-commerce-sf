@@ -19,3 +19,4 @@ web/config.php
 web/css/
 web/js/
 web/compressed/
+KayCoreBundle/compressed/
